@@ -17,3 +17,8 @@ step 1.3: In settings.py, change database settings
 step 2.1: To create database create database StudentDB, use StudentDB, show tables
 step 2.2: In models.py, create id, name and score field
 step 2.3: now make migration
+
+29: step 3: add serializer.py 
+step 3.1: create class student serializer with modelserializer
+step 3.2: import the student model from the app
+step 3.3: call the model and fields inside meta class
