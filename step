@@ -29,3 +29,7 @@ step 4.2: in views.py, create a post method to save the student record
 
 32: step 5: create detail view function
 step 5.1: In views.py, create detail view using primary key
+
+33, 34: step 6: add api_view, URL
+step 6.1: import api_view from rest_framework.decorators, and add the methods with is responsible for 
+step 6.2: In urls.py, create path for student_list function and student_detail

@@ -3,8 +3,13 @@ from fbvapp.models import Students
 from fbvapp.serializers import StudentSerializer
 from rest_framework.response import Response 
 from rest_framework import status
-# Create your views here.
+from rest_framework.decorators import api_view
 
+
+
+
+# Create your views here.
+@api_view(['GET', 'POST'])
 def student_list(request):
     if request.method == 'GET':
         student = Students.objects.all()
