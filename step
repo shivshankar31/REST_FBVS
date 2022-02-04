@@ -26,3 +26,6 @@ step 3.3: call the model and fields inside meta class
 30, 31: step 4: create Get, POST menthod
 step 4.1: in views.py, create a get menthod
 step 4.2: in views.py, create a post method to save the student record 
+
+32: step 5: create detail view function
+step 5.1: In views.py, create detail view using primary key
