@@ -22,3 +22,7 @@ step 2.3: now make migration
 step 3.1: create class student serializer with modelserializer
 step 3.2: import the student model from the app
 step 3.3: call the model and fields inside meta class
+
+30, 31: step 4: create Get, POST menthod
+step 4.1: in views.py, create a get menthod
+step 4.2: in views.py, create a post method to save the student record 
