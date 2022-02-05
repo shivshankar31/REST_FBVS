@@ -23,7 +23,7 @@ def student_list(request):
             return Response(serializer.data, status = status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+@api_view(['GET', 'PUT', 'DELETE'])
 def student_detail(request,pk):
     try:
         stud = Students.objects.get(pk=pk)
@@ -41,7 +41,7 @@ def student_detail(request,pk):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-    elif request.method == 'delete':
+    elif request.method == 'DELETE':
         stud.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
         
