@@ -38,3 +38,9 @@ step 6.2: In urls.py, create path for student_list function and student_detail
 step 7.1: corrections, add @api_view for student_detail function
 step 7.2: coorection, change max digits to 5 
 step 7.3: add some recode to the table and run the url to do the test in UI.
+
+36,37,38 Step 8: create new app for class based view
+step 8.1: create new app for class based view, python3 manage.py startapp cbvapp
+step 8.2: in models.py, create employee model
+step 8.3: in serializer.py, create employee fields
+step 8.4: in views.py, create class based view for get and post, import all nessary 

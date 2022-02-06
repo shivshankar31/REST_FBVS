@@ -43,5 +43,5 @@ def student_detail(request,pk):
     
     elif request.method == 'DELETE':
         stud.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response("Successfully Deleted",status=status.HTTP_204_NO_CONTENT)
         
