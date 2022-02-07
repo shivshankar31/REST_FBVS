@@ -17,11 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from fbvapp.views import student_detail,student_list
 from cbvapp.views import EmployeesDetails, EmployeeList
+from mixins.views import ProductDetail, ProductList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('students/', student_list),
     path('students/<int:pk>', student_detail),
     path('employee/', EmployeeList.as_view()),
-    path('employee/<int:pk>', EmployeesDetails.as_view())
+    path('employee/<int:pk>', EmployeesDetails.as_view()),
+    path('products/', ProductList.as_view()),
+    path('products/<int:pk>', ProductDetail.as_view())
 ]
