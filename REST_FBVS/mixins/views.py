@@ -4,8 +4,16 @@ from rest_framework. mixins import ListModelMixin, CreateModelMixin, RetrieveMod
 from rest_framework.generics import GenericAPIView,ListAPIView,RetrieveUpdateDestroyAPIView,CreateAPIView
 from mixins.models import ProductsModel
 from mixins.serializers import ProductSerializer
+from rest_framework import viewsets
+
 # Create your views here.
 
+class ProductViewset(viewsets.ModelViewSet): #insted of ModelViewSet we can use ReadonlyModelViewSet - this will remove add, edit and delete option
+    queryset = ProductsModel.objects.all()
+    serializer_class = ProductSerializer
+
+
+'''
 
 class ProductList(ListAPIView,CreateAPIView):
     queryset = ProductsModel.objects.all()
@@ -15,7 +23,7 @@ class ProductDetail(RetrieveUpdateDestroyAPIView):
     queryset = ProductsModel.objects.all()
     serializer_class = ProductSerializer
 
-'''
+
 class ProductList(ListModelMixin, CreateModelMixin, GenericAPIView):
     queryset = ProductsModel.objects.all()
     serializer_class = ProductSerializer

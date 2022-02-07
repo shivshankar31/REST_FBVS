@@ -13,11 +13,24 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django import urls
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from fbvapp.views import student_detail,student_list
 from cbvapp.views import EmployeesDetails, EmployeeList
-from mixins.views import ProductDetail, ProductList
+# from mixins.views import ProductDetail, ProductList
+from rest_framework.routers import DefaultRouter
+from mixins import views
+
+router = DefaultRouter()
+router.register('product', views.ProductViewset)
+
+urlpatterns = [
+    path('', include(router.urls)),
+    path('admin/', admin.site.urls)
+
+]
+'''
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,3 +41,4 @@ urlpatterns = [
     path('products/', ProductList.as_view()),
     path('products/<int:pk>', ProductDetail.as_view())
 ]
+'''

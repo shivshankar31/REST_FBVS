@@ -60,6 +60,9 @@ step 11.3: add url and test.
 Step 12.1: import generics view, ListAPIView, RetrieveUpdateDestroyAPIView, CreateAPIView
 step 12.2: now create the class and add queryset and serilizer_class
 
-
+48, 49, 50: step 13: ViewSets
+step 13.1: viewsets will do the CRUD operation in 3 lines of code 
+step 13.2: we can use ModelViewSets and ReadonlyModelViewsSets as well
+step 13.3: add default router and include for ViewSets
 
 
