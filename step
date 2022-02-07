@@ -47,3 +47,5 @@ step 8.4: in views.py, create class based view for get and post, import all ness
 
 40: step 9: create class for get,put,delete
 step 9.1 : in views.py, create class for get,put,delete
+
+41: Step 10: Add URL and test

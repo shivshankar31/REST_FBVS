@@ -4,13 +4,13 @@ from cbvapp.models import Employees
 from cbvapp.serializers import EmployeeSerializer
 from rest_framework.response import Response
 from rest_framework import status
-from django.http import Http404, response
+from django.http import Http404
 # Create your views here.
 
 class EmployeeList(views.APIView):
 
     def get (self,request):
-        emp = Employees.object.all()
+        emp = Employees.objects.all()
         empseri = EmployeeSerializer(emp, many = True)
         return Response(empseri.data)
 
@@ -26,14 +26,14 @@ class EmployeesDetails(views.APIView):
 
     def get_object(self,pk):
         try:
-            return Employees.object.get(pk=pk)
+            return Employees.objects.get(pk=pk)
         except Employees.DoesNotExist:
             raise Http404
     
-    def get(self,pk): # request deleted
+    def get(self,request,pk): 
         emp = self.get_object(pk)
-        empdetail = EmployeeSerializer(emp.data) # as not in the learing
-        return Response(empdetail)
+        empdetail = EmployeeSerializer(emp) 
+        return Response(empdetail.data)
 
     def put(self, request, pk):
         emp = self.get_object(pk)

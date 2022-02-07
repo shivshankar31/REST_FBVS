@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from fbvapp import views
-
+from fbvapp.views import student_detail,student_list
+from cbvapp.views import EmployeesDetails, EmployeeList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('students/', views.student_list),
-    path('students/<int:pk>', views.student_detail),
+    path('students/', student_list),
+    path('students/<int:pk>', student_detail),
+    path('employee/', EmployeeList.as_view()),
+    path('employee/<int:pk>', EmployeesDetails.as_view())
 ]
