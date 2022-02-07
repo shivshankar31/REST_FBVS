@@ -55,4 +55,11 @@ step 11.1: create new app and add the the app to settings.py
 step 11.2: create models.py , serializer.py 
 step 11.3: create view class and use mixins handler methods 
 step 11.3: add url and test.
- 
+
+46, 47: step 12: Generics View
+Step 12.1: import generics view, ListAPIView, RetrieveUpdateDestroyAPIView, CreateAPIView
+step 12.2: now create the class and add queryset and serilizer_class
+
+
+
+
