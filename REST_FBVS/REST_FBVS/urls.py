@@ -21,16 +21,15 @@ from cbvapp.views import EmployeesDetails, EmployeeList
 # from mixins.views import ProductDetail, ProductList
 from rest_framework.routers import DefaultRouter
 from mixins import views
+from nsapp.views import AuthorDetailView, AuthorListView, BookDetailView, BookListView
 
 router = DefaultRouter()
 router.register('product', views.ProductViewset)
 
-urlpatterns = [
-    path('', include(router.urls)),
-    path('admin/', admin.site.urls)
+# urlpatterns = [
+#     path('', include(router.urls)),
+# ]
 
-]
-'''
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,7 +37,12 @@ urlpatterns = [
     path('students/<int:pk>', student_detail),
     path('employee/', EmployeeList.as_view()),
     path('employee/<int:pk>', EmployeesDetails.as_view()),
-    path('products/', ProductList.as_view()),
-    path('products/<int:pk>', ProductDetail.as_view())
+    # path('products/', ProductList.as_view()),
+    # path('products/<int:pk>', ProductDetail.as_view()),
+    path('', include(router.urls)),
+    path('author',AuthorListView.as_view()),
+    path('author/<int:pk>',AuthorDetailView.as_view()),
+    path('book',BookListView.as_view()),
+    path('book/<int:pk>', BookDetailView.as_view()),
 ]
-'''
+

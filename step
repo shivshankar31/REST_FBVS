@@ -61,8 +61,15 @@ Step 12.1: import generics view, ListAPIView, RetrieveUpdateDestroyAPIView, Crea
 step 12.2: now create the class and add queryset and serilizer_class
 
 48, 49, 50: step 13: ViewSets
-step 13.1: viewsets will do the CRUD operation in 3 lines of code 
+step 13.1: viewsets will` do the CRUD operation in 3 lines of code 
 step 13.2: we can use ModelViewSets and ReadonlyModelViewsSets as well
 step 13.3: add default router and include for ViewSets
 
+
+51 to 56: step 14: nested serializer
+step 14.1: create app nsapp and add to settings
+step 14.2: create models class for author and book using foreginkey for use the other
+step 14.3: create serializer.py and add ModelSerializer and call the two models
+step 14.4: create views using generics views
+step 14.5: add urls, make migrate and test
 

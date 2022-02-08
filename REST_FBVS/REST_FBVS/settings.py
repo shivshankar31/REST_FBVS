@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'fbvapp',
     'cbvapp',
     'mixins',
+    'nsapp',
     'rest_framework',
 ]
 
