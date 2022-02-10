@@ -73,3 +73,7 @@ step 14.3: create serializer.py and add ModelSerializer and call the two models
 step 14.4: create views using generics views
 step 14.5: add urls, make migrate and test
 
+57 to 60: step 15: Pagination
+step 15.1: two ways for pagination, global and class based pagination
+step 15.2: for globel add the default pagination in settings.py
+step 15.3: for class based pagination, add a new class and call the class

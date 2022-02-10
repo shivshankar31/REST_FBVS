@@ -1,3 +1,4 @@
+from mmap import PAGESIZE
 from django.shortcuts import render
 from rest_framework import views
 from cbvapp.models import Employees
@@ -5,9 +6,15 @@ from cbvapp.serializers import EmployeeSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
+from rest_framework.pagination import PageNumberPagination
 # Create your views here.
 
+class EmpPagination(PageNumberPagination):
+    page_size = 1
+
 class EmployeeList(views.APIView):
+
+    pagination_class = EmpPagination
 
     def get (self,request):
         emp = Employees.objects.all()
@@ -23,6 +30,8 @@ class EmployeeList(views.APIView):
 
         
 class EmployeesDetails(views.APIView):
+
+    pagination_class = EmpPagination
 
     def get_object(self,pk):
         try:
