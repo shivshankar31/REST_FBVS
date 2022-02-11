@@ -83,3 +83,8 @@ step 16.1: install "pip install django-filter", add to installed apps 'django_fi
 step 16.2: import to views.py, "from django_filters.rest_framework import DjangoFilterBackend"
 step 16.3: call the filterbackend class inside the view class.
 step 16.4: add filterset_fields, and call the required filter fields.
+
+64 to 66: step 17: enabel search, ordering
+step 17.1: in views.py, use filter.searchfield class and specify search fields  
+step 17.2: as advance search, use symboles infront of field names $,^,=, etc..
+step 17.3: to enable ordering, call orderingfilter class and specify the filed if required, also you can use default ordering if required 

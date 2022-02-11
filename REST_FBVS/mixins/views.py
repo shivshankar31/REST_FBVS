@@ -7,7 +7,7 @@ from mixins.serializers import ProductSerializer
 from rest_framework import viewsets
 from rest_framework.pagination import LimitOffsetPagination
 from django_filters.rest_framework import DjangoFilterBackend
-
+from rest_framework import filters
 # Create your views here.
 
 # class ProdPagination(LimitOffsetPagination):
@@ -21,6 +21,13 @@ class ProductViewset(viewsets.ModelViewSet): #insted of ModelViewSet we can use 
     # pagination_class = ProdPagination
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['name', 'price']
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['$name', '^price'] #we can use ^, $, = to search in presize 
+    filter_backends = [filters.OrderingFilter]
+    ordering_fields = ['name', 'price']
+    ordering = ['id'] # this is for default ordering.
+    
+
 
 
 '''
