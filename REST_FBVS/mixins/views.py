@@ -5,12 +5,22 @@ from rest_framework.generics import GenericAPIView,ListAPIView,RetrieveUpdateDes
 from mixins.models import ProductsModel
 from mixins.serializers import ProductSerializer
 from rest_framework import viewsets
+from rest_framework.pagination import LimitOffsetPagination
+from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
+
+# class ProdPagination(LimitOffsetPagination):
+#     page_size = 3
+#     # age_size_query_param = 'page_size'
+#     # max_page_size = 2
 
 class ProductViewset(viewsets.ModelViewSet): #insted of ModelViewSet we can use ReadonlyModelViewSet - this will remove add, edit and delete option
     queryset = ProductsModel.objects.all()
     serializer_class = ProductSerializer
+    # pagination_class = ProdPagination
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['name', 'price']
 
 
 '''

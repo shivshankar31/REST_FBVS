@@ -26,9 +26,9 @@ from nsapp.views import AuthorDetailView, AuthorListView, BookDetailView, BookLi
 router = DefaultRouter()
 router.register('product', views.ProductViewset)
 
-# urlpatterns = [
-#     path('', include(router.urls)),
-# ]
+urlpatterns = [
+    path('', include(router.urls)),
+]
 
 
 urlpatterns = [

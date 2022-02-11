@@ -38,17 +38,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'fbvapp',
     'cbvapp',
     'mixins',
     'nsapp',
-    'rest_framework',
+    'django_filters',
 ]
+
 
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 2
+    'PAGE_SIZE': 1
 }
 
 MIDDLEWARE = [
@@ -90,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'StudentDB',
         'USER' : 'root',
-        'PASSWORD': ''
+        'PASSWORD': 'Admin@123'
     }
 }
 

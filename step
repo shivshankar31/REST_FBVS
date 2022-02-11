@@ -77,3 +77,9 @@ step 14.5: add urls, make migrate and test
 step 15.1: two ways for pagination, global and class based pagination
 step 15.2: for globel add the default pagination in settings.py
 step 15.3: for class based pagination, add a new class and call the class
+
+61 to 63: step 16: enable Filter
+step 16.1: install "pip install django-filter", add to installed apps 'django_filters'
+step 16.2: import to views.py, "from django_filters.rest_framework import DjangoFilterBackend"
+step 16.3: call the filterbackend class inside the view class.
+step 16.4: add filterset_fields, and call the required filter fields.
