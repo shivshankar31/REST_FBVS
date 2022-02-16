@@ -88,3 +88,8 @@ step 16.4: add filterset_fields, and call the required filter fields.
 step 17.1: in views.py, use filter.searchfield class and specify search fields  
 step 17.2: as advance search, use symboles infront of field names $,^,=, etc..
 step 17.3: to enable ordering, call orderingfilter class and specify the filed if required, also you can use default ordering if required 
+
+67 to 69: step 18: Authendication and permission - class level
+step 18.1: in generics.ListCreateAPIView inport - from rest_framework.authentication import BasicAuthentication 
+step 18.2: in generics.ListCreateAPIView inport - from rest_framework.permissions import IsAuthenticated, DjangoModelPermissions
+step 18.3: now use authentication_classes and permission_classes to override, 
