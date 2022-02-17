@@ -93,3 +93,6 @@ step 17.3: to enable ordering, call orderingfilter class and specify the filed i
 step 18.1: in generics.ListCreateAPIView inport - from rest_framework.authentication import BasicAuthentication 
 step 18.2: in generics.ListCreateAPIView inport - from rest_framework.permissions import IsAuthenticated, DjangoModelPermissions
 step 18.3: now use authentication_classes and permission_classes to override, 
+
+70: step 19:  Authendication and permission - globel level
+step 19.1: in settings.py, add DEFAULT_AUTHENTICATION_CLASSES and DEFAULT_PERMISSION_CLASSES and call the required models. 

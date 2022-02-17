@@ -18,8 +18,8 @@ class AuthorListView(ListCreateAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
     # pagination_class = Pagination
-    authentication_classes = [BasicAuthentication]
-    permission_classes = [IsAuthenticated, DjangoModelPermissions]
+    # authentication_classes = [BasicAuthentication]
+    # permission_classes = [IsAuthenticated, DjangoModelPermissions]
 
 class AuthorDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Author.objects.all()
